@@ -6,3 +6,28 @@
 body{
     font-family: "Work Sans", serif;
 }
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+/* Smaill Screens */
+@media (min-width:768px) {
+    .container{
+        width: 750px;
+    }
+}
+/* Medium Screens */
+@media (min-width:992px) {
+    .container{
+        width: 970px;
+    }
+}
+/* LArge Screens */
+@media (min-width:120px) {
+    .container{
+        width: 1170px;
+    }
+}
