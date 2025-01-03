@@ -1,3 +1,4 @@
+/* ================================ Start Global Rules ========================================= */
 *{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -11,7 +12,6 @@ body{
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    width: 600px;
 }
 /* Smaill Screens */
 @media (min-width:768px) {
@@ -26,8 +26,83 @@ body{
     }
 }
 /* LArge Screens */
-@media (min-width:120px) {
+@media (min-width:1200px) {
     .container{
         width: 1170px;
     }
 }
+
+/* ================================ End Global Rules ========================================= */
+/* ================================ Start Header ========================================= */
+
+.header{
+    padding: 20px;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header img{
+    width: 60px;
+}
+.header .links{
+    position: relative;
+}
+.header .links .icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header .links .icon span{
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+    width: 100%;
+}
+.header .links .icon span:nth-child(2){
+    width: 65%;
+    transition: .3s;
+}
+.header .links .icon:hover span:nth-child(2){
+ width: 100%;   
+}
+.header .links ul{
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    min-width: 200px;
+    display: none;
+}
+.header .links:hover ul{
+    display: block;
+}
+.header .links ul::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+.header .links ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    color: #333;
+    transition: .3s;
+}
+.header .links ul li a:hover{
+    padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a{
+    border-bottom: 1px solid #ddd;
+}
+
+/* ================================ End Header ========================================= */
